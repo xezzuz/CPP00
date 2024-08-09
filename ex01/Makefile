@@ -5,20 +5,20 @@
 #                                                     +:+ +:+         +:+      #
 #    By: nazouz <nazouz@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/05/10 14:18:14 by nazouz            #+#    #+#              #
-#    Updated: 2024/07/04 11:59:56 by nazouz           ###   ########.fr        #
+#    Created: 2024/06/06 18:31:34 by nazouz            #+#    #+#              #
+#    Updated: 2024/07/04 12:02:39 by nazouz           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=			megaphone
+NAME			=			PhoneBook
 
 CPP				=			c++
 
 CPPFLAGS		=			-Wall -Wextra -Werror
 
-INCLUDES		=			megaphone.hpp
+INCLUDES		=			PhoneBook.hpp Contact.hpp
 
-SRCS			=			megaphone.cpp
+SRCS			=			PhoneBook.cpp Contact.cpp main.cpp
 
 OBJS			=			$(SRCS:.cpp=.o)
 

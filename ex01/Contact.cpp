@@ -6,7 +6,7 @@
 /*   By: nazouz <nazouz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 19:07:47 by nazouz            #+#    #+#             */
-/*   Updated: 2024/05/11 10:58:42 by nazouz           ###   ########.fr       */
+/*   Updated: 2024/07/04 12:08:26 by nazouz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,53 +14,53 @@
 #include "Contact.hpp"
 
 Contact::Contact() {
-	// firstName = "";
-	// lastName = "";
-	// nickName = "";
-	// phoneNumber = "";
-	// darkestSecret = "";
+	firstName = "";
+	lastName = "";
+	nickName = "";
+	phoneNumber = "";
+	darkestSecret = "";
 }
 
 Contact::~Contact() {
-	
+
 }
 
-std::string		Contact::getfName() {
-	return this->firstName;
+std::string		Contact::getfName() const {
+	return firstName;
 }
 
-std::string		Contact::getlName() {
-	return this->lastName;
+std::string		Contact::getlName() const {
+	return lastName;
 }
 
-std::string		Contact::getnName() {
-	return this->nickName;
+std::string		Contact::getnName() const {
+	return nickName;
 }
 
-std::string		Contact::getPhoneNumber() {
-	return this->phoneNumber;
+std::string		Contact::getPhoneNumber() const {
+	return phoneNumber;
 }
 
-std::string		Contact::getSecret(void) {
-	return this->darkestSecret;
+std::string		Contact::getSecret() const {
+	return darkestSecret;
 }
 
 void			Contact::setfName(std::string fName) {
-	this->firstName = fName;
+	firstName = fName;
 }
 
 void			Contact::setlName(std::string lName) {
-	this->lastName = lName;
+	lastName = lName;
 }
 
 void			Contact::setnName(std::string nName) {
-	this->nickName = nName;
+	nickName = nName;
 }
 
 void			Contact::setPhoneNumber(std::string phoneNum) {
-	this->phoneNumber = phoneNum;
+	phoneNumber = phoneNum;
 }
 
 void			Contact::setSecret(std::string Secret) {
-	this->darkestSecret = Secret;
+	darkestSecret = Secret;
 }

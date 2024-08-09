@@ -6,7 +6,7 @@
 /*   By: nazouz <nazouz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 16:38:47 by nazouz            #+#    #+#             */
-/*   Updated: 2024/05/11 13:37:49 by nazouz           ###   ########.fr       */
+/*   Updated: 2024/07/04 12:08:55 by nazouz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,36 @@ bool			isDigitString(std::string str)
 	return true;
 }
 
+bool				isAllWhiteSpaces(std::string str) {
+	int			i;
+
+	i = -1;
+	while (str[++i])
+		if (!isspace(str[i]))
+			return false;
+	return true;
+}
+
 std::string			getInput(std::string input_type)
 {
 	std::string		input;
 
-	std::cout << input_type << ":\t";
-	std::getline(std::cin, input);
+	while (true) {
+		std::cout << input_type << ":\t";
+		if (!std::getline(std::cin, input))
+			exit(1);
+		if (input.empty() || isAllWhiteSpaces(input)) {
+			std::cout << input_type << " cannot be empty, Try again" << std::endl;
+			continue ;
+		}
+		else {
+			if (input_type == "Phone Number" && !isDigitString(input)) {
+				std::cout << input_type << " should contain only digits, Try again" << std::endl;
+				continue ;
+			}
+			break ;
+		}
+	}
 	return input;
 }
 
@@ -82,7 +106,7 @@ void		PhoneBook::displayContactsTable()
 
 void		PhoneBook::addContact() {
 	int		contactId = 0;
-	
+
 	if (contactsCount < 8) {
 		contactId = contactsCount;
 		contactsCount++;
@@ -90,7 +114,7 @@ void		PhoneBook::addContact() {
 	std::cout << std::endl;
 	contacts[contactId].setfName(getInput("First Name"));
 	contacts[contactId].setlName(getInput("Last Name"));
-	contacts[contactId].setnName(getInput("Nick Name"));
+	contacts[contactId].setnName(getInput("Nickname"));
 	contacts[contactId].setPhoneNumber(getInput("Phone Number"));
 	contacts[contactId].setSecret(getInput("Darkest Secret"));
 }
@@ -104,8 +128,6 @@ void		PhoneBook::searchContacts() {
 		while (true)
 		{
 			input = getInput("Enter contact index for his/her full info");
-			if (std::cin.eof())
-				return ;
 			if (!isDigitString(input)) {
 				std::cout << "Index must contain only digits" << std::endl;
 				continue ;

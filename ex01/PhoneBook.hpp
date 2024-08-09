@@ -6,7 +6,7 @@
 /*   By: nazouz <nazouz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 16:38:45 by nazouz            #+#    #+#             */
-/*   Updated: 2024/05/11 13:24:51 by nazouz           ###   ########.fr       */
+/*   Updated: 2024/06/06 18:43:46 by nazouz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ class PhoneBook {
 	private:
 		Contact			contacts[8];
 		int				contactsCount;
-	public:
 
+	public:
 		PhoneBook();
 		~PhoneBook();
 

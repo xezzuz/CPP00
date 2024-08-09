@@ -5,20 +5,20 @@
 #                                                     +:+ +:+         +:+      #
 #    By: nazouz <nazouz@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/05/10 14:18:14 by nazouz            #+#    #+#              #
-#    Updated: 2024/07/04 11:59:56 by nazouz           ###   ########.fr        #
+#    Created: 2024/06/07 12:43:45 by nazouz            #+#    #+#              #
+#    Updated: 2024/07/04 17:20:26 by nazouz           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=			megaphone
+NAME			=			Account
 
 CPP				=			c++
 
 CPPFLAGS		=			-Wall -Wextra -Werror
 
-INCLUDES		=			megaphone.hpp
+INCLUDES		=			Account.hpp
 
-SRCS			=			megaphone.cpp
+SRCS			=			Account.cpp tests.cpp
 
 OBJS			=			$(SRCS:.cpp=.o)
 
